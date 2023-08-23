@@ -3,14 +3,6 @@
 
 This project provides an implementation of the AES (Advanced Encryption Standard) encryption algorithm in Java. AES is a widely used encryption standard known for its strong security features. This implementation showcases the encryption and decryption process using the AES algorithm.
 
-    Prerequisites:
-
-    Before you begin, make sure you have the Java Development Kit (JDK) installed on your computer. You'll also need a basic understanding of Java programming.
-
-    Installation:
-        Clone the repository containing the AES encryption code or download the ZIP archive from the repository.
-        Extract the downloaded ZIP file to a location of your choice.
-
     Exploring the Code:
 
     Open the AES_Algo.java file in a Java development environment, such as an Integrated Development Environment (IDE) like Eclipse or IntelliJ IDEA. You'll find the code organized into different components:
