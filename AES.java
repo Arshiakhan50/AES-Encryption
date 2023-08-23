@@ -1,6 +1,6 @@
 package Text;
 
-public class AES_Algo{
+public class AES{
 	
 
 	public static void main(String[] args) {
