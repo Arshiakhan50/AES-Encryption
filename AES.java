@@ -1,6 +1,6 @@
 package Text;
 
-public class AED_Algo{
+public class AES_Algo{
 	
 
 	public static void main(String[] args) {
