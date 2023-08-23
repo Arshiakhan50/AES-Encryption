@@ -5,8 +5,8 @@ public class AES{
 
 	public static void main(String[] args) {
 		
-		String key =  /*"2b7e151628aed2a6abf7158809cf4f3c";*/"5468617473206D79204B756E67204675";
-		String message=/*"3243f6a8885a308d313198a2e0370734";*/"54776F204F6E65204E696E652054776F";
+		String key = "2B7E151628AED2A6ABF7158809CF4F3C";
+		String message= "3243F6A8885A308D313198A2E0370734";
 		key = key.toUpperCase();
 		message = message.toUpperCase();
 		KeyGen kg = new KeyGen();
