@@ -21,7 +21,7 @@ KeyGen Class:
     Implements the expandKey method to generate all 11 round keys from an initial encryption key.
     Uses the getRoundKey method to compute each round key by applying transformations, including left rotations, S-box substitution, and XOR with round constants.
 
-Main Class:
+AES Class:
 
     Contains the main method that serves as the entry point for the program.
     Demonstrates the use of the other classes by creating instances, generating round keys, and performing encryption and decryption.
