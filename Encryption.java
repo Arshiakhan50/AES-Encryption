@@ -5,6 +5,25 @@ class Encryption extends Conversion{
 	/*
 	 * Decrypts ciphertext given a ciphertext and set of round keys
 	 */
+	void writeEncryptedMessageToFile(String fileName, String encryptedMessage) {
+	try {
+	    Files.write(Paths.get(fileName), encryptedMessage.getBytes());
+	    System.out.println("Encrypted message written to " + fileName);
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
+	}
+	
+	// Add a method for reading encrypted message from a file using Streams
+	String readEncryptedMessageFromFile(String fileName) {
+	try {
+	    return Files.lines(Paths.get(fileName)).collect(Collectors.joining());
+	} catch (IOException e) {
+	    e.printStackTrace();
+	    return "";
+	}
+	}
+	
 	String deCipher(String msgState, String[]roundKey){
 		msgState = binToHexAll( XOR( hexToBin(msgState), hexToBin(roundKey[10]) ) );
 		for(int i=9;i>0;i--){
