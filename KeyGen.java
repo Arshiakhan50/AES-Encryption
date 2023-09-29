@@ -1,11 +1,44 @@
 package Text;
-
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 class KeyGen extends Conversion{
 	String []roundKey = new String[11];
 	
 	String []Rcon = {"01000000","02000000","04000000","08000000","10000000","20000000","40000000","80000000","1b000000","36000000"};
 
+	void writeRoundKeysToFile(String fileName) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+            for (String key : roundKey) {
+                writer.write(key);
+                writer.newLine();
+            }
+            writer.close();
+            System.out.println("Round keys written to " + fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Add a method for reading the round keys from a file
+    void readRoundKeysFromFile(String fileName) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String line;
+            int index = 0;
+            while ((line = reader.readLine()) != null && index < roundKey.length) {
+                roundKey[index++] = line;
+            }
+            reader.close();
+            System.out.println("Round keys read from " + fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 	
 	/*
 	 * Expands cipher key to get multiple keys for multiple rounds
